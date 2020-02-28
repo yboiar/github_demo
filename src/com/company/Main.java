@@ -8,14 +8,17 @@ public class Main {
 
         Scanner s = new Scanner(System.in);
         String month = s.nextLine().toUpperCase();
-        Seasons season = null;
+        monthResolver(month);
+    }
 
+    public static void monthResolver(String month) {
+        Seasons season = null;
         switch (month) {
             case "DECEMBER":
             case "JANUARY":
             case "FEBRUARY":
                 season = Seasons.WINTER;
-            break;
+                break;
             case "MARCH":
             case "APRIL":
             case "MAY":
@@ -37,6 +40,4 @@ public class Main {
         }
         if (season != null) System.out.println(season.toString());
     }
-
-
 }
